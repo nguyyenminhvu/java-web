@@ -1,0 +1,56 @@
+.tilte__check {
+
+}
+.tilte__check_x{
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    width: 91%
+}
+table {
+    width: 65%;
+
+}
+
+.groupTable {
+    display: flex;
+    justify-content: center;
+
+}
+
+td {
+    width: 100%;
+    font-size: 102%;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.p3 {
+    display: flex;
+    justify-content: center;
+}
+
+.groupButtonF {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.groupA {
+    display: flex;
+    width: 60%
+}
+
+.groupA a {
+    padding-left: 15px;
+}
+.groupTotal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.groupTotal__x{
+    width: 60%
+}

@@ -1,0 +1,178 @@
+.welcomePage {
+    width: fit-content;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    color: rgb(11, 87, 62);
+}
+
+.welcomePage__group {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+
+}
+
+.welcomeP1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-shadow: 5px 5px 3px #b8b7b8
+}
+
+.nameAdmin {
+    padding-left: 10px;
+}
+
+.searchGroup {
+    display: flex;
+    width: 70%;
+}
+
+.iconSearch {
+    border: 1px solid rgb(101, 185, 160);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: rgb(101, 185, 160);
+}
+
+.inputSearch {
+    height: 45px;
+    width: 250px;
+    border: 1px solid rgb(224, 221, 221);
+    border-left: none;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.inputSearch:focus {
+    outline: none;
+
+}
+
+.cusSubmit {
+    padding: 10.5px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgb(46, 175, 104), rgb(6, 104, 36));
+    color: aliceblue;
+
+}
+
+table {
+    width: 70%;
+}
+
+
+
+table th {
+    border: 1px solid rgb(241, 234, 234);
+    height: 50px;
+    text-align: center;
+    font-size: 120%;
+    background-color: rgb(105, 156, 139);
+    color: #ffffff;
+}
+
+table td {
+    border: 1px solid rgb(226, 226, 226);
+    padding-left: 8px;
+    height: 35px;
+    background-color: white;
+}
+
+.frame_2 {
+    display: flex;
+    justify-content: center;
+}
+
+.cusUpdate,
+.cusRemove {
+    padding: 5px 20px;
+}
+
+.cusRemove:hover,
+.cusUpdate:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.searchG1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+table {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
+}
+.cusInputQ{
+    height: 50px;
+    width: 100%;
+    border: none;
+}
+.cusInputQ:focus{
+    outline:  none;
+}
+.quantityTh{
+    width: 15%;
+}
+.p3{
+    display: flex;
+    justify-content: center;
+}
+.groupButtonF{
+    width: 70%;
+}
+.groupA{
+    display: flex;
+    justify-content: end;
+}
+.groupA a{
+    padding-left: 15px;
+}
+.inputCusS{
+    height: 70%;
+    text-align: center;
+    width: 62%;
+    background-color:#dc3545;
+    border: 1px solid  #dc3545;
+    border-radius: 5px;color: aliceblue;
+}
+.inputCusS:hover{
+    opacity: 0.8;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.inputCusS:focus{
+    outline: none;
+}
+
+
+.inputCusS1{
+    height: 70%;
+    text-align: center;
+    width: 62%;
+    background-color: #ffc107;
+    border: 1px solid  #ffc107;
+    border-radius: 5px;color: aliceblue;
+    color: black;
+}
+.inputCusS1:hover{
+    opacity: 0.8;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.inputCusS1:focus{
+    outline: none;
+}

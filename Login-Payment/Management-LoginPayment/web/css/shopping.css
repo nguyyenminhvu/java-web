@@ -1,0 +1,90 @@
+.titleShop {
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleShop__content {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.cartButton {
+    padding: 18px 18px;
+}
+
+.cusIcon {
+    font-size: 280%;
+    color: rgb(150, 99, 4);
+}
+
+.cusIcon:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.iconGroup {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.iconGroup__x {
+    width: 100%;
+    height: 40%;
+
+
+}
+
+.cusCol2 {
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 280px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+form{
+    height: 100%
+}
+.cusImg {
+    height: 55%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cusImg img {
+    width: 100%;
+}
+
+.tilteFlower {
+    height: 40px;
+    padding: 8px 8px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 130%;
+    font-weight: 600;
+}
+
+.priceFlower {
+    height: 35px;
+    text-align: center;
+    padding: 4px 4px;
+    font-size: 100%;
+}
+.selectAdd{
+    padding: 7px 5px;
+    border-radius: 8px;
+    border: 1px solid rgb(201, 198, 198);
+}
+.buttonAdd{
+    display: flex;
+    justify-content: space-around;
+}
+h1 {
+    font-size: calc(1em + 8vmin);
+    font-weight: 900;
+    color: tomato;
+}
+
