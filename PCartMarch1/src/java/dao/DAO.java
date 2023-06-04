@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import model.Product;
+
+/**
+ *
+ * @author ACER
+ */
+public class DAO extends DBContext {
+
+    public List<Product> getAllProduct() {
+        String sql = "select * from product";
+        List<Product> list = new ArrayList<>();
+        try {
+            PreparedStatement st = connection.prepareStatement(sql);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                Product p = new Product(rs.getInt("id"), rs.getString("name"), rs.getFloat("price"), rs.getInt("quantity"));
+                list.add(p);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return list;
+    }
+
+    public Product getProductById(int id) {
+        String sql = "select * from product where id=?";
+        try {
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.setInt(1, id);
+            ResultSet rs = st.executeQuery();
+            if (rs.next()) {
+                Product p = new Product(rs.getInt("id"), rs.getString("name"), rs.getFloat("price"), rs.getInt("quantity"));
+                return p;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error at DAO: " + e);
+        }
+        return null;
+    }
+
+    public boolean checkOut(Map<Integer, Product> map) {
+
+        int size = map.size();
+        boolean check = false;
+        for (Product p : map.values()) {
+            Product pNew = getProductById(p.getId());
+            String sql = "update product set quantity=? where id=? ";
+            try {
+                PreparedStatement st = connection.prepareStatement(sql);
+                st.setInt(1, (pNew.getQuantity()-p.getQuantity()));
+                st.setInt(2, p.getId());
+                st.executeUpdate();
+                check = true;
+            } catch (SQLException e) {
+                System.out.println("Error at DAO: " + e);
+            }
+        }
+        return check;
+    }
+
+    public static void main(String[] args) {
+        DAO d = new DAO();
+        List<Product> list = d.getAllProduct();
+        System.out.println(list.size());
+    }
+}
